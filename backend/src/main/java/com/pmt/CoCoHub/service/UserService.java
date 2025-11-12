@@ -1,5 +1,6 @@
 package com.pmt.CoCoHub.service;
 
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.pmt.CoCoHub.dto.UserSignInDTO;
@@ -11,6 +12,7 @@ import com.pmt.CoCoHub.repository.UserRepository;
 public class UserService {
 
     private final UserRepository userRepository;
+    private BCryptPasswordEncoder encoder =  new BCryptPasswordEncoder(12);
 
     public UserService(UserRepository userRepository) {
         this.userRepository = userRepository;
@@ -23,9 +25,9 @@ public class UserService {
         }
 
         User user = new User();
-        user.setUserName(dto.getName()); // ← DTO se "name" aa raha hai
+        user.setUserName(dto.getName()); 
         user.setEmail(dto.getEmail());
-        user.setPassword(dto.getPassword()); // baad mein BCrypt
+        user.setPassword((encoder.encode(dto.getPassword())));
         return userRepository.save(user);
     }
 
