@@ -1,6 +1,6 @@
 package com.pmt.CoCoHub.config;
 
-import com.pmt.CoCoHub.config.UserPrincipal;
+// import com.pmt.CoCoHub.config.UserPrincipal;
 
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
