@@ -8,7 +8,6 @@ import com.pmt.CoCoHub.dto.UserSignUpDTO;
 import com.pmt.CoCoHub.model.User;
 import com.pmt.CoCoHub.service.UserService;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;

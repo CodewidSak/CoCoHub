@@ -1,6 +1,5 @@
 package com.pmt.CoCoHub.model;
 
-import com.pmt.CoCoHub.model.Role;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
