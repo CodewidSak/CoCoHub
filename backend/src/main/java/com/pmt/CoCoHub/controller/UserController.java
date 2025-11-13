@@ -10,6 +10,7 @@ import com.pmt.CoCoHub.service.UserService;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
@@ -35,6 +36,11 @@ public class UserController {
     public ResponseEntity signUpUser(@RequestBody UserSignInDTO userSingInDTO) {
         User user = userService.signInUser(userSingInDTO);
         return ResponseEntity.ok(user);
+    }
+    
+    @GetMapping("/hello")
+    public ResponseEntity helloUser() {
+        return ResponseEntity.ok("Hello User");
     }
     
 }
